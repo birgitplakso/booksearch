@@ -8,68 +8,27 @@
 
    test andmebaasi jaoks on vaja hardcodeida andmed olemasolevasse andmebaasi-->
 
-    <changeSet id="03.05.21" author="Birgit">
-
-        <createTable tableName="stores">
-            <column name="id" type="integer">
-                <constraints primaryKey="true"/>
-            </column>
-            <column name="store_name" type="text"/>
-        </createTable>
-
-        <createTable tableName="books">
-            <column name="book_id" type="integer" autoIncrement="true">
-                <constraints primaryKey="true"/>
-            </column>
-            <column name="book_title" type="text"/>
-            <column name="author" type="text"/>
-            <column name="isbn" type="text"/>
-            <column name="year_of_publishing" type="text"/>
-            <column name="number_of_pages" type="text"/>
-            <column name="format" type="text"/>
-            <column name="price" type="text"/>
-            <column name="store_id" type="integer">
-                <constraints foreignKeyName="fk_store_name" references="stores(id)"/>
-            </column>
-            <column name="url_image" type="text"/>
-        </createTable>
-    </changeSet>
-
-    <changeSet id="05.05.21" author="Birgit">
-        <addColumn tableName="books">
-            <column name="url_page" type="text"/>
-        </addColumn>
-    </changeSet>
-
-    <changeSet id="05.05.21 #2" author="Birgit">
-        <modifyDataType tableName="books" columnName="year_of_publishing" newDataType="text"/>
-    </changeSet>
-
-<!--    <changeSet id="10.05.21" author="Birgit">-->
-<!--        <dropColumn tableName="store" columnName="id"/>-->
-<!--        <addColumn tableName="store">-->
-<!--            <column name="id" type="integer">-->
+<!--    <changeSet id="03.05.21" author="Birgit">-->
+<!--        -->
+<!--        <createTable tableName="books">-->
+<!--            <column name="book_id" type="integer" autoIncrement="true">-->
 <!--                <constraints primaryKey="true"/>-->
 <!--            </column>-->
-<!--        </addColumn>-->
+<!--            <column name="book_title" type="text"/>-->
+<!--            <column name="author" type="text"/>-->
+<!--            <column name="isbn" type="text"/>-->
+<!--            <column name="year_of_publishing" type="text"/>-->
+<!--            <column name="number_of_pages" type="text"/>-->
+<!--            <column name="format" type="text"/>-->
+<!--            <column name="price" type="text"/>-->
+<!--            <column name="store_id" type="integer">-->
+<!--                <constraints foreignKeyName="fk_store_name" references="stores(id)"/>-->
+<!--            </column>-->
+<!--            <column name="url_image" type="text"/>-->
+<!--        </createTable>-->
 <!--    </changeSet>-->
-    <changeSet id="10.05.21" author="Birgit">
-        <insert tableName="stores">
-            <column name="id" value="1"/>
-            <column name="store_name" value="Apollo"/>
-        </insert>
-        <insert tableName="stores">
-            <column name="id" value="2"/>
-            <column name="store_name" value="Rahva Raamat"/>
-        </insert>
-        <insert tableName="stores">
-            <column name="id" value="3"/>
-            <column name="store_name" value="Krisostomus"/>
-        </insert>
-        <insert tableName="stores">
-            <column name="id" value="4"/>
-            <column name="store_name" value="Raamatukoi"/>
-        </insert>
-    </changeSet>
+
+
+
 
 </databaseChangeLog>
