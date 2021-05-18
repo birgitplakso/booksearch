@@ -4,7 +4,9 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd ">
 
-<!-- ülemine osa on vajalik projekti alustamiseks, </databaseChangeLog> -->
+<!-- ülemine osa on vajalik projekti alustamiseks, </databaseChangeLog>
+
+   test andmebaasi jaoks on vaja hardcodeida andmed olemasolevasse andmebaasi-->
 
     <changeSet id="03.05.21" author="Birgit">
 
